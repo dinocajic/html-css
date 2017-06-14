@@ -234,12 +234,13 @@ ul.nav li.right {
     color: #FFFFFF;
 }
 
+/* Modify quote under heading */
 #web-programming > h3 {
     font-weight: lighter;
     font-style: italic;
     text-align: center;
     color: #CCCCCC;
-    padding-bottom: 1%;
+    padding: 0 2% 1% 2%;
 }
 
 /* Modify div tags and add drop-shadow around table */
@@ -286,6 +287,7 @@ ul.nav li.right {
 #hobbies > h3 {
     font-weight: lighter;
     font-style: italic;
+    padding: 0 2% 1% 2%;
 }
 
 /* Display images inline */
@@ -323,6 +325,7 @@ ul.nav li.right {
 #education > h3 {
     font-weight: lighter;
     font-style: italic;
+    padding: 0 2% 1% 2%;
 }
 
 /* Format p, ol and ul tags */
@@ -382,6 +385,13 @@ ul.nav li.right {
     }
 }
 
+/* Fill up the screen with image gallery */
+@media screen and (max-width: 1500px) {
+    .img-gallery {
+        width: 33%;
+    }
+}
+
 /* Correct the about me figures to move properly on mobile */
 @media screen and (max-width: 1045px){
 
@@ -397,12 +407,25 @@ ul.nav li.right {
     }
 }
 
+/* Fill up the screen with image gallery */
+@media screen and (max-width: 800px) {
+    .img-gallery {
+        width: 48%;
+    }
+}
+
 /* Correct elements on screens smaller than 600px */
 @media screen and (max-width: 600px){
     /* Causes the navigation to go mobile */
     ul.nav li.right,
     ul.nav li {
         float: none;
+        height: 0;
+    }
+
+    /* Hide the GitHub and blog links */
+    ul.nav li.right {
+        visibility: hidden;
     }
 
     /* Need to move profile image because of navigation bar on mobile */
@@ -413,5 +436,16 @@ ul.nav li.right {
     /* Reduce font size of h2 subheading in main banner */
     #main-background > h2 {
         font-size: 150%;
+    }
+
+    #web-programming > h1 {
+        margin: 0 2% 0 2%;
+    }
+}
+
+/* Need to expand the background of the main banner since smaller heights cut off content */
+@media screen and (max-height: 800px){
+    #main-background {
+        height:800px;
     }
 }
